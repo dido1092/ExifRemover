@@ -24,7 +24,10 @@ namespace ExifRemover
                 pathWithFiles = openFileDialog1.FileNames;
             }
 
-            filesNameWithPath = pathWithFiles.ToHashSet();
+            if (pathWithFiles != null)
+            {
+                filesNameWithPath = pathWithFiles.ToHashSet();
+            }
 
             richTextBoxImages.Text = string.Join("\n", filesNameWithPath);
 
