@@ -13,7 +13,6 @@ namespace ExifRemover
             Thread thread = new Thread(PathToDesktop);
             thread.Start();
         }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Clear();
@@ -73,7 +72,6 @@ namespace ExifRemover
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             textBoxDestination.Text = path;
         }
-
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             string selectedFile = richTextBoxImages.SelectedText;
@@ -83,7 +81,6 @@ namespace ExifRemover
             richTextBoxImages.Text = string.Join("\r\n", filesNameWithPath);
             labelItems.Text = $"Items: {filesNameWithPath.Count()}";
         }
-
         private void buttonClear_Click(object sender, EventArgs e)
         {
             Clear();
@@ -97,7 +94,6 @@ namespace ExifRemover
             destination = string.Empty;
             pathWithFiles = null!;
         }
-
         private async void buttonRemoveExif_Click(object sender, EventArgs e)
         {
             progressBarComplete.Minimum = 0;
